@@ -1,6 +1,12 @@
+<!--
+ * @Author: yangzp
+ * @Description: 
+ * @Date: 2022-11-17 17:01:57
+ * @FilePath: \web-project\src\views\errorPage\404.vue
+-->
 <template>
-  <div class="panel-box pd-15">
-    <p class="fz-36 tc color-red">404</p>
+  <div>
+    <p>404</p>
   </div>
 </template>
 

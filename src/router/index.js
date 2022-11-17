@@ -14,6 +14,19 @@ import routeCenterRoutes from './routeCenterRoutes';
 /** 通用路由 */
 export const constantRoutes = [
   {
+    path: '/',
+    component: Layout,
+    redirect: 'dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index'),
+        name: 'dashboard',
+        meta: { title: '首页', noCache: true, affix: true }
+      }
+    ]
+  },
+  {
     path: '/redirect',
     component: Layout,
     hidden: true,
@@ -33,19 +46,6 @@ export const constantRoutes = [
     path: '/401',
     component: () => import('@/views/errorPage/401'),
     hidden: true
-  },
-  {
-    path: '/',
-    component: Layout,
-    redirect: 'dashboard',
-    children: [
-      {
-        path: 'dashboard',
-        component: () => import('@/views/dashboard/index'),
-        name: 'dashboard',
-        meta: { title: '首页', noCache: true, affix: true }
-      }
-    ]
   },
   {
     ...routeCenterRoutes

@@ -1,6 +1,12 @@
+<!--
+ * @Author: yangzp
+ * @Description: 
+ * @Date: 2022-11-17 17:01:57
+ * @FilePath: \web-project\src\views\errorPage\ssoErr.vue
+-->
 <template>
-  <div class="panel-box pd-15">
-    <p class="fz-36 tc color-red">认证失败</p>
+  <div>
+    <p>认证失败</p>
   </div>
 </template>
 
