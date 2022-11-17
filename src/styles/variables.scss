@@ -1,0 +1,80 @@
+//======================================================================================================================
+//==================================================== 样式规范变量 ======================================================
+//======================================================================================================================
+/*--- color ---*/
+$--color-primary: #0A8BE6;
+$color-primary: #0A8BE6 !default;
+$color-success: #64ca11 !default;
+$color-warning: #f4850e !default;
+$color-danger: #ff6244 !default;
+$color-info: #909399 !default;
+
+/*--- layout布局 ---*/
+$scrollbarColor: rgba(144,147,153,0.5) !default;   //el-scrollbar自定义滚动条颜色
+// $bodyBg: url(../assets/images/bg/bg-main.jpg) !default;   //界面默认背景
+$bodyBg: #fff !default;   //界面默认背景
+$bodyFontColor: #333 !default;   //界面默认字体颜色
+$headerHeight: 62px !default;   //顶部导航栏高度
+$headerBoxShadowColor: transparent !default; //顶部导航栏投影颜色
+
+$sideBarWidth: 210px !default;   //侧边菜单栏宽度
+$sideBarHeight: 40px !default;   //侧边菜单栏宽度
+$sidebarBg: #0F80F4 !default;  //侧边栏背景
+$sideBarBoxShadowColor: #ccc !default; //侧边栏和标签栏投影颜色
+
+$tagsBarBg: #fff !default;   //标签栏背景
+$tagsBarBorderColor: #f0f0f0 !default;   //标签栏下边框颜色
+
+/*--- navBar顶部导航栏 ---*/
+$hamburgerColor: #94d3ff !default; //侧边栏收起展开按钮颜色
+// $navbarBg: url(../assets/images/bg/navbar.jpg) center center/cover no-repeat !default; //顶部导航栏背景
+$navbarBg: #fff !default; //顶部导航栏背景
+$navbarWaveBg: url(../assets/images/bg/bg-wave.png) !default; //顶部导航栏波浪背景
+$navbarFontColor: #ffffff !default; //顶部导航栏字体颜色
+$navbarFontSize: 14px !default; //顶部导航栏字体大小
+$navBarBadgeBgColor: #E83932; //顶部导航栏消息数标记背景色
+
+/*--- sidebar侧边菜单栏 ---*/
+$menuFontSize: 16px !default;          //菜单字体大小
+$menuFontColor: #546269 !default;          //菜单字体颜色
+$menuActiveFontColor: #fff !default;    //激活菜单字体颜色
+$menuBgColor: $sidebarBg !default;  //菜单栏背景色
+//$menuHoverColor: #ccc !default;  //菜单项悬停背景色，配合修改element-ui中的`$--menu-item-hover-fill`使用
+$menuArrowColor: #909399 !default;  //子菜单伸展箭头颜色
+
+/*--- tagsbar标签栏 ---*/
+$tagBgColor: #ededed !default;  //标签背景色
+$tagActiveBgColor: #EAF2FA !default;  //激活标签背景色
+$tagFontColor: #546269 !default;  //标签字体颜色
+$tagActiveFontColor: #0F80F4 !default;  //激活标签字体颜色
+$tagBorderColor: #d8dce5 !default;  //标签默认边框颜色
+$tagCloseBtnHoverColor: #fff !default;  //标签关闭按钮hover颜色(x)
+$tagCloseBtnHoverBgColor: #b4bccc !default;  //标签关闭按钮hover背景色
+
+$tagContextFontColor: #333 !default;  //标签右键菜单字体颜色
+$tagContextBgColor: #fff !default;  //标签右键菜单背景色
+$tagContextBoxShadowColor: rgba(0, 0, 0, .3) !default;  //标签右键菜单投影颜色
+$tagContextHoverBgColor: #eee !default; //标签右键菜单hover项背景色
+
+$mainWidth: 1200px !default;  //主内容区宽度
+
+//======================================================================================================================
+//=============================================== element-ui样式变量重置 =================================================
+//======================================================================================================================
+$--font-path: '~element-ui/lib/theme-chalk/fonts';  //改变 element-ui icon 字体路径变量，必需
+@import '~element-ui/packages/theme-chalk/src/common/var.scss';  //element-ui 中的样式变量
+
+$--color-primary: $color-primary;
+$--color-success: $color-success;
+$--color-warning: $color-warning;
+$--color-danger: $color-danger;
+$--color-info: $color-info;
+
+/*--- menu ---*/
+$--menu-item-font-size: $menuFontSize;
+$--menu-item-color: $menuFontColor;
+$--menu-item-fill: $menuBgColor;
+//$--menu-item-hover-fill: $menuHoverColor;
+
+/*--- badge ---*/
+$--badge-fill: $navBarBadgeBgColor;
