@@ -1,5 +1,10 @@
+/*
+ * @Author: yangzp
+ * @Description: 
+ * @Date: 2022-11-17 16:24:34
+ * @FilePath: \web-project\src\router\index.js
+ */
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 /* Layout */
 import Layout from '@/views/layout/Layout'
@@ -19,31 +24,11 @@ export const constantRoutes = [
       }
     ]
   },
-  // {
-  //   path: '/login',
-  //   component: () => import('@/views/login/index'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/saleCenterDictMobileWeb/ssoLogin',
-  //   redirect: '/ssoLogin',
-  //   hidden: true
-  // },
   {
     path: '/ssoLogin',
     component: () => import('@/views/login/ssoLogin'),
     hidden: true
   },
-  // {
-  //   path: '/oaDealTask',
-  //   component: () => import('@/views/login/oaDealTask'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/toOtherSystem',
-  //   component: () => import('@/views/redirect/toOtherSystem'),
-  //   hidden: true
-  // },
   {
     path: '/404',
     component: () => import('@/views/errorPage/404'),
@@ -54,11 +39,6 @@ export const constantRoutes = [
     component: () => import('@/views/errorPage/401'),
     hidden: true
   },
-  // {
-  //   path: '/ssoErr',
-  //   component: () => import('@/views/errorPage/ssoErr'),
-  //   hidden: true
-  // },
   {
     path: '/',
     component: Layout,
@@ -80,27 +60,13 @@ export const constantRoutes = [
 // 异步路由
 export const asyncRoutes = [];
 
-
-const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
-];
-
 const router = createRouter({
+  mode: 'history',
+  scrollBehavior() {
+    return { y: 0 }
+  },
   history: createWebHistory(process.env.BASE_URL),
-  routes,
+  routes: constantRoutes.concat(asyncRoutes)
 });
 
 export default router;

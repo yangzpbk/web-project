@@ -1,12 +1,12 @@
 <!--
  * @Author: yangzp
  * @Description: 
- * @Date: 2022-11-17 17:00:56
- * @FilePath: \web-project\src\views\login\ssoLogin.vue
+ * @Date: 2022-11-17 17:15:53
+ * @FilePath: \web-project\src\views\layout\Layout.vue
 -->
 <template>
   <div>
-    ssoLogin
+layout
   </div>
 </template>
 
