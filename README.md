@@ -1,8 +1,14 @@
+<!--
+ * @Author: yangzp
+ * @Description: 
+ * @Date: 2022-11-17 16:24:45
+ * @FilePath: \web-project\README.md
+-->
 # web-project
 
 ## Project setup
 ```
-npm install
+npm install123
 ```
 
 ### Compiles and hot-reloads for development
