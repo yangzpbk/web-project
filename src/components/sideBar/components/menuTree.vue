@@ -6,32 +6,41 @@
 -->
 <template>
     <div>
-        <template v-for="menu in this.menuData" :key="menu.index">
-            <el-submenu :key="menu.index" :index="menu.index" v-if="menu.children">
+        <!-- v-if="!item.hidden" -->
+        <template v-for="(item, index) in activeRoute">
+            <!--二级菜单-->
+            <el-submenu :index="item.path">
                 <template slot="title">
-                    <i :class="menu.icon"></i>
-                    <span slot="title">{{ menu.name }}</span>
+                    <i :class="item.icon"></i>
+                    <span>{{ item.name }}</span>
                 </template>
-                <menu-tree :menuData="menu.children"></menu-tree>
             </el-submenu>
-            <el-menu-item :key="menu.index + 1" :index="menu.index" v-else>
-                <i :class="menu.icon"></i>
-                <span slot="title">{{ menu.name }}</span>
+            <!--顶级菜单-->
+            <el-menu-item :index="item.path">
+                <span>{{ item.meta.title }}</span>
             </el-menu-item>
         </template>
     </div>
 </template>
 
 <script>
-import { Template } from 'webpack';
 
 export default {
     name: "MenuTree",
     props: ['menuData'],
-    created(){
-        console.log(this.menuList);
+    // methods: {
+    //     printLn() {
+    //         console.log(this.menuList);
+    //     }
+    // },
+    computed: {
+        activeRoute: function () {
+            return this.menuData.filter(function (routes) {
+                console.log(routes);
+                return !routes.hidden;
+            })
+        }
     },
-    components: { Template }
 }
 </script>
 

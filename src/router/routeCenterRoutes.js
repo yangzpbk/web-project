@@ -15,6 +15,7 @@ const routeCenterRoutes = {
   meta: {
     title: '路由中心'
   },
+  hidden: false,
   children: [
     {
       ...projectRoutes

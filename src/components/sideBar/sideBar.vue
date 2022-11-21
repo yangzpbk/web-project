@@ -5,7 +5,7 @@
  * @FilePath: \web-project\src\components\SideBar\Sidebar.vue
 -->
 <template>
-  <el-menu class="el-menu" router :default-active="$route.path" default-active="1" @open="handleOpen"
+  <el-menu class="el-menu" router :default-active="1" default-active="1" @open="handleOpen"
     @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
     <menu-tree :menuData="menuList"></menu-tree>
   </el-menu>
@@ -20,7 +20,7 @@ export default {
       menuList: []
     };
   },
-  components:{
+  components: {
     MenuTree
   },
   created() {

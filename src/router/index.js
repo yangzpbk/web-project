@@ -20,11 +20,14 @@ export const constantRoutes = [
     path: '/',
     component: Layout,
     redirect: 'dashboard',
+    hidden: false,
+    meta: { title: '首页', noCache: true, affix: true },
     children: [
       {
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'dashboard',
+        hidden: false,
         meta: { title: '首页', noCache: true, affix: true }
       }
     ]
@@ -33,22 +36,26 @@ export const constantRoutes = [
     path: '/redirect',
     component: Layout,
     hidden: true,
+    meta: { title: '重定向', noCache: true, affix: true },
     children: [
       {
         path: '/redirect/:path*',
-        component: () => import('@/views/redirect/index')
+        component: () => import('@/views/redirect/index'),
+        meta: { title: '重定向', noCache: true, affix: true }
       }
     ]
   },
   {
     path: '/404',
     component: () => import('@/views/errorPage/404'),
-    hidden: true
+    hidden: true,
+    meta: { title: '404', noCache: true, affix: true }
   },
   {
     path: '/401',
     component: () => import('@/views/errorPage/401'),
-    hidden: true
+    hidden: true,
+    meta: { title: '401', noCache: true, affix: true }
   }
 ];
 

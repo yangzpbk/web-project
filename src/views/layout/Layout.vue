@@ -18,7 +18,7 @@
         <side-bar />
       </el-aside>
       <el-main>
-        <router-view @dispatchTaskOrder="dispatchTaskOrder" />
+        <router-view/>
       </el-main>
     </el-container>
 

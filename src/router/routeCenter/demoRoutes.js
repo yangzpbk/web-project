@@ -10,6 +10,7 @@ const demoRoutes = {
     path: 'demo',
     component: PlaceholderView,
     meta: { title: '路由测试', noCache: true },
+    hidden: false,
     children: [
         {
             path: 'pageOne',

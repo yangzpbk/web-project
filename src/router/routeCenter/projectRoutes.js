@@ -9,13 +9,14 @@ import PlaceholderView from '@/views/compDisplay/placeholderView';
 const projectRoutes = {
   path: 'project',
   component: PlaceholderView,
-  meta: { title: '预立项管理', noCache: true },
+  meta: { title: '项目管理', noCache: true },
+  hidden: false,
   children: [
     {
       path: 'projectList',
       component: () => import('@/views/routeCenter/project/projectList.vue'),
       name: 'projectList',
-      meta: { title: '预立项列表', noCache: true }
+      meta: { title: '项目管理列表', noCache: true }
     }
   ]
 };
