@@ -14,6 +14,9 @@ import routeCenterRoutes from './routeCenterRoutes';
 /** 通用路由 */
 export const constantRoutes = [
   {
+    ...routeCenterRoutes
+  },
+  {
     path: '/',
     component: Layout,
     redirect: 'dashboard',
@@ -46,9 +49,6 @@ export const constantRoutes = [
     path: '/401',
     component: () => import('@/views/errorPage/401'),
     hidden: true
-  },
-  {
-    ...routeCenterRoutes
   }
 ];
 

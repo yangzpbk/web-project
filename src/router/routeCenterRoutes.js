@@ -6,6 +6,8 @@
  */
 import PlaceholderView from '@/views/compDisplay/placeholderView'
 import projectRoutes from './routeCenter/projectRoutes';
+import demoRoutes from './routeCenter/demoRoutes';
+
 
 const routeCenterRoutes = {
   path: '/routeCenter',
@@ -16,6 +18,9 @@ const routeCenterRoutes = {
   children: [
     {
       ...projectRoutes
+    },
+    {
+      ...demoRoutes
     }
   ]
 };
