@@ -4,25 +4,20 @@
  * @Date: 2022-11-21 09:56:13
  * @FilePath: \web-project\src\components\sideBar\components\menuTree.vue
 -->
-<template>
-    <div>
-        <!-- v-if="!item.hidden" -->
-        <template v-for="(item, index) in activeRoute">
-            <!--二级菜单-->
-            <el-submenu :index="item.path">
-                <template slot="title">
-                    <i :class="item.icon"></i>
-                    <span>{{ item.name }}</span>
-                </template>
-            </el-submenu>
-            <!--顶级菜单-->
-            <el-menu-item :index="item.path">
-                <span>{{ item.meta.title }}</span>
-            </el-menu-item>
+<template v-for="(menu, index) in menuData">
+    <el-submenu v-if="menu.children && menu.children.length >= 1" :index="menu.menuId + ''">
+        <template slot="title">
+            <icon-svg :name="menu.icon || ''"></icon-svg>
+            <span>{{ menu.name }}</span>
         </template>
-    </div>
+        <sub-menu v-for="item in menu.list" :key="item.menuId" :menu="item" :dynamicMenuRoutes="dynamicMenuRoutes">
+        </sub-menu>
+    </el-submenu>
+    <el-menu-item v-else :index="menu.menuId + ''" @click="gotoRouteHandle(menu)">
+        <icon-svg :name="menu.icon || ''" class="site-sidebar__menu-icon"></icon-svg>
+        <span>{{ menu.name }}</span>
+    </el-menu-item>
 </template>
-
 <script>
 
 export default {
@@ -33,6 +28,9 @@ export default {
     //         console.log(this.menuList);
     //     }
     // },
+    created(){
+        console.log(this.menuData)
+    },
     computed: {
         activeRoute: function () {
             return this.menuData.filter(function (routes) {
