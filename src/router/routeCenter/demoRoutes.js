@@ -4,11 +4,11 @@
  * @Date: 2022-11-17 16:48:34
  * @FilePath: \web-project\src\router\routeCenter\demoRoutes.js
  */
-import PlaceholderView from '@/views/compDisplay/placeholderView';
+import Layout from '@/views/layout/Layout';
 
 const demoRoutes = {
     path: 'demo',
-    component: PlaceholderView,
+    component: Layout,
     meta: { title: '路由测试', noCache: true },
     hidden: false,
     children: [

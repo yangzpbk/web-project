@@ -4,14 +4,14 @@
  * @Date: 2022-11-17 16:45:05
  * @FilePath: \web-project\src\router\routeCenterRoutes.js
  */
-import PlaceholderView from '@/views/compDisplay/placeholderView'
+import Layout from '@/views/layout/Layout'
 import projectRoutes from './routeCenter/projectRoutes';
 import demoRoutes from './routeCenter/demoRoutes';
 
 
 const routeCenterRoutes = {
   path: '/routeCenter',
-  component: PlaceholderView,
+  component: Layout,
   meta: {
     title: '路由中心'
   },

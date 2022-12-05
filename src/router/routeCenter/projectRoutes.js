@@ -4,11 +4,11 @@
  * @Date: 2022-11-17 16:48:34
  * @FilePath: \web-project\src\router\routeCenter\projectRoutes.js
  */
-import PlaceholderView from '@/views/compDisplay/placeholderView';
+import Layout from '@/views/layout/Layout';
 
 const projectRoutes = {
   path: 'project',
-  component: PlaceholderView,
+  component: Layout,
   meta: { title: '项目管理', noCache: true },
   hidden: false,
   children: [

@@ -24,7 +24,7 @@ export const constantRoutes = [
     meta: { title: '首页', noCache: true, affix: true },
     children: [
       {
-        path: 'dashboard',
+        path: '/dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'dashboard',
         hidden: false,
